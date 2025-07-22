@@ -13,7 +13,6 @@ import {
   RotateCcw, 
   Award,
   MapPin,
-  Users,
   Palette
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -124,7 +123,7 @@ const stats = [
 export default function HomePage() {
   const { addToCart, addToFavorites, isFavorite } = useStore()
 
-  const handleAddToCart = (product: any) => {
+  const handleAddToCart = (product: typeof featuredProducts[0]) => {
     addToCart({
       id: product.id,
       name: product.name,
@@ -134,7 +133,7 @@ export default function HomePage() {
     })
   }
 
-  const handleToggleFavorite = (product: any) => {
+  const handleToggleFavorite = (product: typeof featuredProducts[0]) => {
     if (isFavorite(product.id)) {
       // Remove from favorites logic would go here
     } else {

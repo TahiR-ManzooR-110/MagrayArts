@@ -79,7 +79,7 @@ const CartSidebar = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -20 }}
-                      className="flex items-center space-x-4 p-4 border border-gray-200 rounded-lg hover:border-amber-300 transition-colors"
+                                             className="flex items-center space-x-4 p-4 border border-gray-200 rounded-lg hover:border-amber-300 transition-colors"
                     >
                       <img
                         src={item.image}
@@ -138,7 +138,7 @@ const CartSidebar = () => {
 
             {/* Footer */}
             {cartItems.length > 0 && (
-              <div className="border-t border-gray-200 p-6 space-y-4">
+                             <div className="border-t border-gray-200 p-6 space-y-4">
                 {/* Subtotal */}
                 <div className="flex justify-between text-lg font-semibold text-gray-900">
                   <span>Total:</span>

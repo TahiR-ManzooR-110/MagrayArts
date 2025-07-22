@@ -3,14 +3,12 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { 
-  Filter, 
   Search, 
   Grid, 
   List, 
   Star, 
   Heart, 
-  ShoppingCart,
-  SlidersHorizontal
+  ShoppingCart
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -128,7 +126,6 @@ export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState('All Categories')
   const [sortBy, setSortBy] = useState('featured')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
-  const [showFilters, setShowFilters] = useState(false)
   
   const { addToCart, addToFavorites, removeFromFavorites, isFavorite } = useStore()
 
@@ -172,7 +169,7 @@ export default function ProductsPage() {
     setProducts(filtered)
   }, [searchQuery, selectedCategory, sortBy])
 
-  const handleAddToCart = (product: any) => {
+  const handleAddToCart = (product: typeof allProducts[0]) => {
     addToCart({
       id: product.id,
       name: product.name,
@@ -182,7 +179,7 @@ export default function ProductsPage() {
     })
   }
 
-  const handleToggleFavorite = (product: any) => {
+  const handleToggleFavorite = (product: typeof allProducts[0]) => {
     if (isFavorite(product.id)) {
       removeFromFavorites(product.id)
     } else {

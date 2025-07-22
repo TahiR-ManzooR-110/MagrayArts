@@ -11,8 +11,7 @@ import {
   Users, 
   ShoppingCart, 
   BarChart3, 
-  Settings,
-  LogOut
+  Settings
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
@@ -65,7 +64,7 @@ export default function AdminLayout({
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Access Denied</h1>
-          <p className="text-gray-600 mb-6">You don't have permission to access the admin panel.</p>
+                        <p className="text-gray-600 mb-6">You don&apos;t have permission to access the admin panel.</p>
           <Link href="/">
             <Button>Go Home</Button>
           </Link>
@@ -79,7 +78,7 @@ export default function AdminLayout({
       {/* Sidebar */}
       <div className="hidden lg:flex lg:flex-shrink-0">
         <div className="flex flex-col w-64">
-          <div className="flex flex-col flex-grow bg-white border-r border-gray-200 pt-5 pb-4 overflow-y-auto">
+                      <div className="flex flex-col flex-grow bg-white border-r border-gray-200 pt-5 pb-4 overflow-y-auto">
             <div className="flex items-center flex-shrink-0 px-4">
               <div className="w-8 h-8 bg-gradient-to-br from-amber-600 to-orange-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">M</span>

@@ -45,7 +45,7 @@ export default function SignInPage() {
           router.push('/')
         }
       }
-    } catch (error) {
+    } catch {
       toast.error('Something went wrong')
     } finally {
       setIsLoading(false)
@@ -156,7 +156,7 @@ export default function SignInPage() {
 
             <div className="text-center">
               <p className="text-sm text-gray-600">
-                Don't have an account?{' '}
+                                  Don&apos;t have an account?{' '}
                 <Link href="/auth/signup" className="text-amber-600 hover:text-amber-500 font-medium">
                   Sign up here
                 </Link>

@@ -17,14 +17,13 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useStore } from '@/lib/store'
-import { cn } from '@/lib/utils'
+
 
 const Header = () => {
   const { data: session } = useSession()
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const { 
-    cartItems, 
     favorites, 
     isMobileMenuOpen, 
     setMobileMenuOpen,
